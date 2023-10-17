@@ -30,7 +30,7 @@ function Formulario (props) {
       <form onSubmit={manejarEnvio} className='flex-col w-9/12 p-5 mx-10 bg-gray-600 rounded-lg'>
         <Campo
           titulo='Video'
-          placeholder='Ingrese las fotos'
+          placeholder='https://www.youtube.com/embed/'
           required
           valor={video}
           actualizarValor={actualizarVideo}

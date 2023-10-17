@@ -10,43 +10,43 @@ export default function App () {
   const [colaboradores, actualizarColaboradores] = useState([
     {
       equipo: 'Programacion',
-      video: 'https://github.com/zeroryper.png'
+      video: 'https://www.youtube.com/embed/WOcAuaRCyTc?si=j9YBZi4Fi6rI4Lb8'
     },
     {
       equipo: 'Programacion',
-      video: 'https://github.com/zeroryper.png'
+      video: 'https://www.youtube.com/embed/O8dWNAdWtgc?si=XaYDQmSUEqTh3S75'
     },
     {
       equipo: 'Programacion',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/WOcAuaRCyTc?si=j9YBZi4Fi6rI4Lb8'
     },
     {
       equipo: 'Programacion',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/tdjNcgdnRyk?si=Y18S0VsfWaUCCHuP'
     },
     {
       equipo: 'Data Science',
-      video: 'https://github.com/zeroryper.png'
+      video: 'https://www.youtube.com/embed/WOcAuaRCyTc?si=j9YBZi4Fi6rI4Lb8'
     },
     {
       equipo: 'Data Science',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/O8dWNAdWtgc?si=XaYDQmSUEqTh3S75'
     },
     {
       equipo: 'Data Science',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/WOcAuaRCyTc?si=j9YBZi4Fi6rI4Lb8'
     },
     {
       equipo: 'Data Science',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/O8dWNAdWtgc?si=XaYDQmSUEqTh3S75'
     },
     {
       equipo: 'Data Science',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/tdjNcgdnRyk?si=Y18S0VsfWaUCCHuP'
     },
     {
       equipo: 'Front End',
-      video: 'https://github.com/christianpva.png'
+      video: 'https://www.youtube.com/embed/O8dWNAdWtgc?si=XaYDQmSUEqTh3S75'
     }
   ])
   const [equipos, actualizarEquipos] = useState([
@@ -93,10 +93,22 @@ export default function App () {
       colorSecundario: '#FFEEDF'
     }
   ])
-  console.log(equipos)
 
   const crearEquipo = (nuevoEquipo) => {
-    actualizarEquipos([...equipos, { ...nuevoEquipo, id: uuid() }])
+    let existe = false
+    equipos.filter((equipo) => {
+      if (equipo.titulo === nuevoEquipo.titulo) {
+        existe = true
+      }
+      return (existe)
+    })
+
+    // Si el título del nuevo equipo ya existe, no se ejecuta actualizarEquipos
+    if (!existe) {
+      actualizarEquipos([...equipos, { ...nuevoEquipo, id: uuid() }])
+    } else {
+      alert('Ese equipo ya existe')
+    }
   }
 
   const registrarColaborador = (colaborador) => {

@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://zeroryper.github.io/React-Challenge-Alura/'
+  base: 'https://zeroryper.github.io/react-challenge-alura/'
 })

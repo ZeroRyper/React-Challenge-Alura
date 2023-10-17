@@ -8,7 +8,7 @@ const Campo = (props) => {
   }
   return (
     <div className={`campo campo-${type}`}>
-      <label>{props.titulo}</label>
+      <label className='text-gray-50'>{props.titulo}</label>
       <input
         placeholder={placeholderModificado}
         required={props.required}

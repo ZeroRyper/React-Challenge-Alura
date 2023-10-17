@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "gh-clean": "gh-pages-clean"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
@@ -19,13 +20,15 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.2",
     "@vitejs/plugin-react": "4.1.0",
     "hex-to-rgba": "^2.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "video-react": "^0.16.0"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"

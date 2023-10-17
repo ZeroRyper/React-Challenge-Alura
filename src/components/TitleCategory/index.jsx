@@ -6,8 +6,8 @@ function TitleCategory (props) {
     backgroundColor: hexToRgba(props.colorPrimario, 0.6)
   }
   return (
-    <div className='justify-center mx-96' style={obj}>
-      <h1 className='text-6xl font-roboto text-center mx-auto my-5'>{props.titulo}</h1>
+    <div>
+      <h1 className='flex justify-center text-6xl font-roboto my-5 w-1/2 mx-auto rounded-lg' style={obj}>{props.titulo}</h1>
     </div>
 
   )
